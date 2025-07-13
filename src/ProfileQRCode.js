@@ -8,7 +8,7 @@ const ProfileQRCode = () => {
   const [profileUrl, setprofileUrl] = useState(""
   );
   const [size, setSize] = useState(300);
-  const [fileName, setFileName] = useState("linkedin_qr_code.svg");
+  const [fileName, setFileName] = useState("profile_qr_code.svg");
 
   // تابع دانلود SVG
   const downloadSVG = () => {
