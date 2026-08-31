@@ -1,8 +1,11 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { fireEvent, render, screen } from "@testing-library/react";
+import App from "./App";
 
-test('renders learn react link', () => {
+test("renders the profile QR code studio", () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  expect(screen.getByRole("heading", { name: /کد QR پروفایل شما/i })).toBeInTheDocument();
+  expect(screen.getByRole("button", { name: /دانلود با کیفیت SVG/i })).toBeInTheDocument();
+  fireEvent.click(screen.getByRole("button", { name: /تغییر زبان به انگلیسی/i }));
+  expect(screen.getByRole("heading", { name: /Your Profile QR Code/i })).toBeInTheDocument();
+  expect(screen.getByRole("button", { name: /Download high-quality SVG/i })).toBeInTheDocument();
 });

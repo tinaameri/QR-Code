@@ -20,8 +20,10 @@
     "dev": "react-scripts start",
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "build:cloudflare": "PUBLIC_URL=/ react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
+    
   },
   "eslintConfig": {
     "extends": [
